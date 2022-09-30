@@ -23,7 +23,8 @@ function validateWordPair(queryWordPair, dictionaryWordPair) {
   if (
     (queryWordPair.first === dictionaryWordPair.first &&
       queryWordPair.second === dictionaryWordPair.second) ||
-    queryWordPair.second === dictionaryWordPair.first
+    (queryWordPair.second === dictionaryWordPair.first &&
+      queryWordPair.second === dictionaryWordPair.second)
   ) {
     result = true;
   }

@@ -36,7 +36,9 @@ function recordResultsToFile(results) {
     fs.rmSync(OUTPUT_FILE_PATH);
   }
 
-  fs.writeFileSync(OUTPUT_FILE_PATH, results.join("\n"));
+  fs.writeFileSync(OUTPUT_FILE_PATH, results.join("\n"), {
+    encoding: "utf-8",
+  });
 }
 
 function main() {
